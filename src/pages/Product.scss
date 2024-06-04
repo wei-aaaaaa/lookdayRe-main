@@ -1,0 +1,63 @@
+.product-page {
+  .header {
+    text-align: center;
+    .search-bar {
+      width: 70%;
+      padding: 10px;
+      margin: 10px auto;
+      font-size: 16px;
+    }
+  }
+  .content {
+    display: flex;
+    .filter-section {
+      width: 20%;
+      padding: 10px;
+      position: -webkit-sticky; /* For Safari */
+      position: sticky;
+      top: 0;
+      height: fit-content;
+      background-color: #fff;
+      border-right: 1px solid #ddd;
+      z-index: 1; /* 使得篩選欄位可以覆蓋在商品列表上 */
+      .filter-group {
+        margin-bottom: 15px;
+        label {
+          display: block;
+          margin-bottom: 5px;
+        }
+        select, input {
+          width: 100%;
+          padding: 5px;
+          font-size: 16px;
+        }
+      }
+    }
+    .product-list {
+      width: 80%;
+      display: flex;
+      flex-wrap: wrap; /* 使用 flexbox 進行 wrap */
+      justify-content: space-around; /* 自動調整商品卡片位置 */
+      padding-top: 50px; /* 為了讓商品列表在篩選時不被篩選條件覆蓋 */
+      .product-card {
+        width: 30%;
+        margin: 1%;
+        padding: 10px;
+        border: 1px solid #ddd;
+        background-color: #fff;
+        .product-image {
+          width: 100%;
+          height: auto;
+        }
+        .product-info {
+          h3 {
+            margin: 10px 0;
+          }
+          p {
+            margin: 5px 0;
+          }
+        }
+      }
+    }
+  }
+}
